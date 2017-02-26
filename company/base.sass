@@ -1,0 +1,37 @@
+/*
+  author: lxj
+  date: 2017.2.26
+  description: base style for developinge better and high efficiency project
+*/
+@mixin clear {
+  clear: both;
+}
+@mixin flex {
+  display: -webkit-flex;
+  display: flex;
+}
+//清除浮动
+.clearfix {
+  &:after {
+    @include clear;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    zoom: 1;
+  }
+}
+
+//使用省略号
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+//清除默认样式
+.default-style {
+          appearance: none;
+     -moz-appearance: none;
+  -webkit-appearance: none;
+}
