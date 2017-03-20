@@ -62,5 +62,12 @@ function postRequest(url, params, options) {
 //  ...
 //  }) 
 //}).catch((message) => {
-
+//  请求失败后的处理
 //})
+
+//同时请求多个Ajax
+//Promise
+//.all([postRequest(url1, params), postRequest(url2, params)])
+//.then((result) => {
+//  result接受所有请求的结果
+//});
