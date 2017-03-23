@@ -1,0 +1,114 @@
+/*
+  author: linxiangjun;
+  date: 2017.3.23;
+  Description: css reset style;
+*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+main, article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);  /*阻止IOS高亮*/
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap:break-word;
+}
+
+img,
+object,
+embed {max-width: 100%;}
+
+html {overflow-y: scroll;}
+
+ul, ol{list-style-type:none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {
+  margin: 0; 
+  padding: 0; 
+  font-size: 100%; 
+  vertical-align: baseline; 
+  background: transparent;
+  text-decoration:none;
+}
+a:hover {
+  text-decoration:none;
+}
+
+table {
+  border-collapse: separate; 
+  border-spacing: 0;
+}
+th {
+  font-weight: bold; 
+  vertical-align: bottom;
+}
+td {
+  font-weight: normal; 
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px; 
+  border: 0; 
+  border-top: 1px solid #ccc; 
+  margin: 1em 0; 
+  padding: 0;
+}
+
+input,
+select,
+textarea {vertical-align: middle;}
+
+input:-webkit-autofill{-webkit-box-shadow: 0 0 0px 1000px white inset}  /*input聚焦后黄色背景清除*/
+
+pre {
+  white-space: pre;  /* CSS2 */
+  white-space: pre-wrap;  /* CSS 2.1 */
+  white-space: pre-line;  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;  /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom;}
+
+small {font-size: 85%;}
+
+strong {font-weight: bold;}
+
+td, td img {vertical-align: top;}
+
+sub, sup {
+  position: relative;
+  font-size: 75%; 
+  line-height: 0; 
+}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+button, input, select, textarea {margin: 0;outline:none;}
