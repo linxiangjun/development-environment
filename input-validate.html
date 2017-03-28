@@ -1,0 +1,47 @@
+<!--
+  author: linxiangjun
+  date: 2017.3.27
+  description: 组件化表单
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>表单样式以及验证</title>
+</head>
+<body>
+  <div id="app">
+    <number-input></number-input>
+  </div>
+</body>
+<script src="vue.js"></script>
+<script>
+  // 注册
+  Vue.component('number-input', {
+    template: 
+      `
+        <input type="number" v-model="num" @blur="validate()" :placeholder="old">
+      `,
+    data () {
+      return {
+        num: '',
+        old: '',
+      }
+    },
+    methods: {
+      validate: function() {
+        var num = this.num.toString();
+        if(!num.match(/^(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/)) {
+          alert('请输入正确的号码');
+          this.num = '';
+          this.old = num;
+        }
+      }
+    }
+  })
+  // 创建根实例
+  new Vue({
+    el: '#app'
+  })
+</script>
+</html>
