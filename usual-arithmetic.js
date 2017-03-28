@@ -92,8 +92,22 @@ function shellSort(arr) {
 
 /*
   冒泡排序算法
+
+  时间复杂度：O(n^2)
 */
 
+function bubbleSort(arr) {
+  for(let i = 0; i < arr.length; i++) {
+    for(let j = 0; j < arr.length - i; j++) {
+      if(arr[j] > arr[j + 1]) {
+        let t = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = t;
+      }
+    }
+  }
+  return arr;
+}
 /*
   二分搜索，要求数组必须为有序数组
 */
@@ -116,5 +130,15 @@ function binarySearch(arr, data) {
 }
 
 /*
-  数组中的函数 reverse() 和 sort() 也可以实现升序和倒序
+  斐波拉契数列
+
+  定义：F(0) = 1; F(1) = 1; F(n) = F(n - 1) + F(n -2) (n >= 2, n ∈ N*)
+
+  尾递归优化(在ES6中，只要使用尾递归，就不会发生栈溢出，相对节省内存)
 */
+
+function Fibonacci2 (n , ac1 = 1 , ac2 = 1) {
+  if( n <= 1 ) {return ac2};
+
+  return Fibonacci2 (n - 1, ac2, ac1 + ac2);
+}
