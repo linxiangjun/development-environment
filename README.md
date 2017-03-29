@@ -38,4 +38,4 @@
 
 开发Jquery下自动验证表单的Demo
 
-**jquery-validate-demo.html**
+*jquery-validate-demo.html*
