@@ -4,7 +4,7 @@
 
 1.新增公司CSS reset 和 通用样式库
 
-2.2017.3.23
+> 2.2017.3.23
 
 1.新增css reset样式
 
@@ -16,7 +16,7 @@
 
 `npm install normalize.css`
 
-4.2017.3.27
+> 4.2017.3.27
 
 **上传常用的算法**
 
@@ -34,8 +34,12 @@
 
 *usual-arithmetic.js*
 
-4.2017.3.28
+> 5.2017.3.28
 
 开发Jquery下自动验证表单的Demo
 
 *jquery-validate-demo.html*
+
+使用vue-resource封装的promise
+
+*encapsulationAjax.js*
