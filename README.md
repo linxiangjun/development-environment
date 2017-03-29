@@ -12,7 +12,7 @@
 
 3.发现 [Normalize.css](https://github.com/linxiangjun/normalize.css/ "Normalize.css ")
 
-一个可以替代 CSS resets 的样式
+一个可以替代 CSS resets 的样式，尽可能的使用浏览器自带的样式来实现同一种效果
 
 `npm install normalize.css`
 
