@@ -32,6 +32,8 @@
 
 * 斐波拉契数列算法
 
+*usual-arithmetic.js*
+
 4.2017.3.28
 
 开发Jquery下自动验证表单的Demo
