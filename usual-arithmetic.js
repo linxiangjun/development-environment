@@ -75,6 +75,7 @@ function insertionSort(arr) {
 /*
   希尔排序
 */
+
 function shellSort(arr) {
   let h = 1;
   while(h < arr.length /3) {
@@ -82,13 +83,55 @@ function shellSort(arr) {
   }
 
   while(h >= 1) {
-
+    for(let i = h; i < arr.length; i++) {
+      for(let j = i; j >= h && arr[j] < arr[j - h]; j -= h) {
+        let t = arr[j];
+        arr[j] = arr[j - h];
+        arr[j - h] = t;
+      }
+    }
+    h = --h / 3;
   }
+  return arr;
 }
 
 /*
   归并算法
+
+  时间复杂度：O(nlogn)，属于稳定的排序
 */
+
+function mergeSort(arr) {
+  if(arr.length < 2) {
+    return arr;
+  }
+
+  let middle = Math.floor(arr.length / 2),
+      left = arr.slice(0, middle),
+      right = arr.slice(middle),
+      params = merge(mergeSort(left), mergeSort(right));
+
+      params.unshift(0, arr.length);
+
+      arr.splice.apply(arr, params);
+
+      return arr;
+
+  function merge(left, right) {
+    let result = [],
+        il = 0,
+        ir = 0;
+
+    while(il < left.length && ir < right.length) {
+      if(left[il] < right[ir]) {
+        result.push(left[il++]);
+      } else {
+        result.push(right[ir++]);
+      }
+    } 
+    return result.concat(left.slice(il)).concat(right.slice(ir));
+  }
+}
 
 /*
   冒泡排序算法
