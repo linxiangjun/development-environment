@@ -185,3 +185,49 @@ function Fibonacci2 (n , ac1 = 1 , ac2 = 1) {
 
   return Fibonacci2 (n - 1, ac2, ac1 + ac2);
 }
+<<<<<<< HEAD
+=======
+
+/*
+  判断质数算法
+
+*/
+
+function isPrime(num) {
+  if(typeof num != 'number' || !Number.isInteger(num)) {
+    return false;
+  }
+
+  if(num < 2) {return false;}
+
+  if(num === 2) {
+    return true;
+  } else if(num % 2 === 0) {
+    return false;
+  }
+
+  for(let i = 3; i <= Math.sqrt(num); i += 2) {
+    if(num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+/*
+  找出小于 n 的所有素数
+*/
+
+function Prime(n) {
+  for(let i = 2; i <= n; i++) {
+    for(let j = 2; j <= i; j++) {
+      if(j <= Math.sqrt(i)) {
+        if(i % j === 0) {
+          break;
+        }
+      }
+      if(j === i) {console.log(i);}
+    }
+  }
+}
+>>>>>>> a73f3196ed5cdb67c1ba5d03cb3aa628fa17e494
