@@ -11,7 +11,7 @@
 
 //封装GET方法
 function getRequest(url, params, options) {
-  return new Promist((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     Vue.http.get(
       url,
       {
@@ -29,7 +29,7 @@ function getRequest(url, params, options) {
 }
 //封装POST方法
 function postRequest(url, params, options) {
-  return new Promist((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     Vue.http.post(
       url,
       {

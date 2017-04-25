@@ -19,7 +19,7 @@ function quickSort(arr) {
 
   let [left, right] = [[], []];
 
-  for(let i = 0;i < arr.length; i++) {
+  for(let i = 0; i < arr.length; i++) {
     if(arr[i] < pivot) {
       left.push(arr[i]);
     } else {
@@ -230,4 +230,22 @@ function Prime(n) {
     }
   }
 }
->>>>>>> a73f3196ed5cdb67c1ba5d03cb3aa628fa17e494
+
+// var arr = [{name: 1}, {name: 1}, {name: 1}, {name: 2}, {name: 2}, {name: 3}, {name: 3}];
+// var obj = {};
+
+// arr.map(function(item, index) {
+//   if(JSON.stringify(obj[item.name]) === undefined) {
+//     obj[item.name] = 1;
+//   } else {
+//     obj[item.name] = obj[item.name] + 1;
+//   }
+// });
+
+// for(id in obj) {
+//   alert(JSON.stringify(arr.splice(0, obj[id])));
+// }
+
+
+
+
