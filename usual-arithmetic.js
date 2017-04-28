@@ -231,20 +231,73 @@ function Prime(n) {
   }
 }
 
-// var arr = [{name: 1}, {name: 1}, {name: 1}, {name: 2}, {name: 2}, {name: 3}, {name: 3}];
-// var obj = {};
+/*
+  判断是否回文
+*/
 
-// arr.map(function(item, index) {
-//   if(JSON.stringify(obj[item.name]) === undefined) {
-//     obj[item.name] = 1;
-//   } else {
-//     obj[item.name] = obj[item.name] + 1;
-//   }
-// });
+function isPalindrome(value) {
+  if(value instanceof Array && value.constructor === Array) {
+    return !!(value.join() === value.reverse().join());
+  }
 
-// for(id in obj) {
-//   alert(JSON.stringify(arr.splice(0, obj[id])));
-// }
+  return arguments.callee(value.split(''));
+}
+
+/*
+  统计一个字符串中出现最多的字母
+*/
+//TODO 这里如果出现多个次数一样的字母，则只返回第一个成功计算出来的
+
+function mostLetters(str) {
+  var arr = str.split(''),
+      obj = {},
+      max = null;
+
+  arr.map(function(item, index) {
+    obj[item] ? obj[item] = obj[item] + 1 : obj[item] = 1;
+
+    index !== 0
+      ? Number(obj[max]) >= Number(obj[item])
+        ? undefined
+        : max = item
+      : max = item;
+    
+    if(index === arr.length - 1){ console.log('最大值：' + max) };
+  });
+}
+
+//第二种方法看起来比较高级
+//TODO 这里暂时不可用，等有时间再完善
+function mostLettersTwo(str) {
+  var arr = str.split(''),
+      obj = [];
+
+  arr.map(function(item, index) {
+    obj[item] ? obj[item] = obj[item] + 1 : obj[item] = 1;
+  });
+
+  console.log(obj);return;
+  return Math.max.apply(null, obj);
+}
+
+/*
+  交换两个整数
+*/
+(function($) {
+  $.a = 3,
+  $.b = 6;
+
+  $.b = $.b - $.a;
+  $.a = $.a + $.b;
+  $.b = $.a - $.b;
+})(window)
+
+
+
+/*
+  杨辉三角
+*/
+
 
 
 
