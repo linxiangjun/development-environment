@@ -47,3 +47,7 @@
 使用vue-resource封装的promise
 
 *encapsulationAjax.js*
+
+> 5.2017.5.27
+
+上传常用的开发样式
