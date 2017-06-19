@@ -276,7 +276,6 @@ function mostLettersTwo(str) {
     obj[item] ? obj[item] = obj[item] + 1 : obj[item] = 1;
   });
 
-  console.log(obj);return;
   return Math.max.apply(null, obj);
 }
 
@@ -297,7 +296,6 @@ function mostLettersTwo(str) {
 /*
   杨辉三角
 */
-
 
 
 
